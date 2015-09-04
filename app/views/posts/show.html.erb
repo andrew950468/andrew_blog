@@ -1,0 +1,6 @@
+<%= render :partial => @post %>
+<%= link_to 'Back', index_path%>
+<h2>Comments</h2>
+ <div id="comments">
+ 	<%= render :partial => @post.comments %>
+ </div>

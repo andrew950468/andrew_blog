@@ -1,0 +1,7 @@
+<h1>Editting Post</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @post %>
+<%= link_to 'Back', index_path %> 
+<%= button_to "delete", @post, :method=>:delete, :class=>:destroy %>

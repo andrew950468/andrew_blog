@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+  #resources :posts
+  scope '/admin' do
+    resources :posts, except: [:index, :show]
+  end
+  
+  resources :posts, only: [:index, :show]
+  get 'posts/:id' => "posts#show", as: :show
+  get 'posts' => "posts#index", as: :index
+  get 'admin/posts/:id' => "posts#show"
+
+  resources :posts do
+    resources :comments, :only => [:create]
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
