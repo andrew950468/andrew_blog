@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   scope '/admin' do
     resources :posts, except: [:index, :show]
   end
-  
+  resources :comments
   resources :posts, only: [:index, :show]
   get 'posts/:id' => "posts#show", as: :show
   get 'posts' => "posts#index", as: :index
