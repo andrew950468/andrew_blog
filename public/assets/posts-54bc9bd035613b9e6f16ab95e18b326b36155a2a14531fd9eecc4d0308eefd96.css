@@ -1,0 +1,12 @@
+body {
+  background-image: url("http://citymocha.com/wp-content/uploads/2012/12/golden-gate-bridge-black-and-white.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right bottom; }
+
+h1 {
+  background-color: #b0c4de;
+  text-align: center;
+  font-family: "HelveticaNeue-Light";
+  font-weight: bold;
+  opacity: 0.5; }
